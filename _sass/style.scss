@@ -1,0 +1,53 @@
+@import "base";
+
+
+$font-color: #000;
+$header-font-family: Georgia, serif;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font: normal 100%/1.7 Helvetica, Arial, FreeSans, sans-serif;
+  background-color: #EBEEF2;
+  color: $font-color;
+}
+#content {
+  max-width: 40em;
+  margin: 2.5em 11em;
+}
+h1 {
+  font: bold 3em/.9em $header-font-family;
+  margin: .7em 0 1.2em;
+}
+h2 {
+  font-family: $header-font-family;
+  font-size: 1.3em;
+  padding: 1.3em 0 .5em;
+}
+h3 {
+  font-family: $header-font-family;
+  font-size: 1.1em;
+  padding: .3em 0 .5em;
+}
+a, a:visited {
+  padding: 2px 2px 1px;
+  text-decoration: none;
+  color: $font-color;
+  background: #ffec8b;
+}
+a:active, a:hover {
+  color: $font-color;
+  background: #ffd917;
+}
+p {
+  margin-bottom: .5em;
+}
+ul {
+  margin-left: 2em;
+}
+input {
+  font-size: 1.3em;
+  padding: .1em;
+}
