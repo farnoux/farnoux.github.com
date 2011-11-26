@@ -1,53 +1,97 @@
 @import "base";
 
+$font-family: "Helvetica Neue", Helvetica, Arial, FreeSans, sans-serif;
+$header-font-family: Cambria, Georgia, Times New Roman, Times, serif;
 
 $font-color: #000;
-$header-font-family: Georgia, serif;
+$bg-color: #9B96BC;
+$h2-horizontal-padding: .9em;
 
-* {
-  margin: 0;
-  padding: 0;
-}
+
 body {
-  font: normal 100%/1.7 Helvetica, Arial, FreeSans, sans-serif;
-  background-color: #EBEEF2;
+  font: normal 100%/1.7 $font-family;
+  background-color: #fff;
   color: $font-color;
 }
-#content {
-  max-width: 40em;
-  margin: 2.5em 11em;
+h1, h2, h3 {
+  font: {
+    family: $header-font-family;
+    weight: bold;
+  }
 }
 h1 {
-  font: bold 3em/.9em $header-font-family;
-  margin: .7em 0 1.2em;
+  font-size: 150%;
+  padding: .2em .9em .3em .9em;
+  margin: .4em 0;
+  background-color: $bg-color;
+  display: inline-block;
 }
 h2 {
-  font-family: $header-font-family;
-  font-size: 1.3em;
-  padding: 1.3em 0 .5em;
+  font-size: 137%;
+  background-color: $bg-color;
+  padding: .2em $h2-horizontal-padding .3em $h2-horizontal-padding;
+  margin: 2em 0 .3em;
 }
 h3 {
-  font-family: $header-font-family;
-  font-size: 1.1em;
-  padding: .3em 0 .5em;
+  font-size: 120%;
+  padding: .3em .5em .5em 1em;
+  @include background-image(linear-gradient(left, rgba(0,0,0,.2), rgba(255,255,255,.1) 90%));
 }
 a, a:visited {
   padding: 2px 2px 1px;
   text-decoration: none;
   color: $font-color;
-  background: #ffec8b;
+  background-color: lighten($bg-color, 20%);
 }
 a:active, a:hover {
   color: $font-color;
-  background: #ffd917;
+  background-color: $bg-color;
 }
-p {
-  margin-bottom: .5em;
+p, ul {
+  margin: 0 .5em .5em 0;
+  padding-left: 1em;
+  @include background-image(linear-gradient(left, rgba(0,0,0,.2), rgba(255,255,255,.1) 90%));
 }
-ul {
-  margin-left: 2em;
+
+#content {
+  margin-left: 38.2%;
+  padding: 1.5em 0;
+  @include box-shadow(-10px 0 0 rgba(0,0,0,.1));
+
+  h1, h2, h3, p, ul {
+    margin-left: -10px;
+  }
+
+  .west {
+    width: 38.2%;
+    display: inline-block;
+    text-align: right;
+    margin-left: -38.2%;
+    position: relative;
+  }
+
+  h2.west {
+    left: -2 * $h2-horizontal-padding;
+  }
 }
-input {
-  font-size: 1.3em;
-  padding: .1em;
+
+
+
+// SCROLLBARS!
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  border-radius: 0px;
+  background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 0;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.2);
+  background-color: #b9b9b9;
 }
