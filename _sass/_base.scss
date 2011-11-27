@@ -1,6 +1,3 @@
-$mono: Menlo, Monaco, "Andale Mono", "lucida console", "Courier New", monospace;
-.mono { font-family: $mono; }
-
 
 @mixin selection($bg, $color: inherit, $text-shadow: none){
   * {
