@@ -4,7 +4,9 @@ $font-family: "Helvetica Neue", Helvetica, Arial, FreeSans, sans-serif;
 $header-font-family: Cambria, Georgia, Times New Roman, Times, serif;
 
 $font-color: #000;
-$bg-color: #9B96BC;
+$main-color: #9B96BC;
+$secondary-color: #C8C5DE;
+
 $h2-horizontal-padding: .9em;
 
 
@@ -23,12 +25,12 @@ h1 {
   font-size: 150%;
   padding: .2em .9em .3em .9em;
   margin: .4em 0;
-  background-color: $bg-color;
+  background-color: $main-color;
   display: inline-block;
 }
 h2 {
   font-size: 137%;
-  background-color: $bg-color;
+  background-color: $main-color;
   padding: .2em $h2-horizontal-padding .3em $h2-horizontal-padding;
   margin: 2em 0 .3em;
 }
@@ -43,20 +45,23 @@ ul {
 em {
   font: bold 110% $header-font-family;
 }
-a, a:visited, a:active, a:hover {
+a, a:visited {
   text-decoration: none;
   color: $font-color;
+  padding: .2em .2em;
+  border-bottom: 1px solid $main-color;
+}
+a:active, a:hover {
+  color: $font-color;
+  background: $secondary-color;
 }
 li {
-  margin-bottom: .1em;
+  /*margin-bottom: .1em;*/
 }
-li a, li a:visited {
+li, p{
   display: block;
   padding: .45em .5em .45em 1em;
   @include background-image(linear-gradient(left, rgba(0,0,0,.2), rgba(255,255,255,.1) 90%));
-}
-li a:active, li a:hover {
-  @include background-image(linear-gradient(left, rgba(0,0,0,.3), rgba(255,255,255,.1) 90%));
 }
 
 #content {
