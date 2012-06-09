@@ -43,7 +43,7 @@ ul {
   margin: 0;
 }
 em {
-  font: bold 110% $header-font-family;
+  font: normal 110% $header-font-family;
 }
 a, a:visited {
   text-decoration: none;
@@ -62,6 +62,10 @@ li, p{
   display: block;
   padding: .45em .5em .45em 1em;
   @include background-image(linear-gradient(left, rgba(0,0,0,.2), rgba(255,255,255,.1) 90%));
+}
+
+.bold {
+  font-weight: bold;
 }
 
 #content {
